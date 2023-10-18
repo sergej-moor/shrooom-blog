@@ -6,7 +6,7 @@
 
 <Navbar />
 <div class="bg-gray-200">
-	<div class="mx-4">
+	<div class="mx-4 relative">
 		<div class="translate-y-16 pb-24">
 			<slot><!-- optional fallback --></slot>
 		</div>

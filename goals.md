@@ -1,0 +1,9 @@
+- [x] lade Daten in die Startseite
+- [x] lade Daten in die Artikelseiten
+- [ ] füge Kategorien hinzu und zeige sie im Frontend an
+- [ ] Icon Package einfügen
+- [ ] Icons mit denen aus dem Package ersetzen
+- [ ] Footer mit Links versehen
+- [ ] Navbar/Navmenü machen
+- [ ] render markdown correctly
+- [ ] figure a way out for the subheading to be displayed

@@ -9,4 +9,16 @@ declare global {
 	}
 }
 
-export {};
+interface Article {
+	headline: string;
+	subheadline: string;
+	featuredImage: string;
+	author: string;
+	introduction: string;
+	body: string;
+	slug: string;
+	publishedAt: Date;
+	categories: Array<string>;
+}
+
+export { Article };
