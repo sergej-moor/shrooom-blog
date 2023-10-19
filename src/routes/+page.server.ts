@@ -1,4 +1,4 @@
-import { compile } from 'mdsvex';
+import { marked } from 'marked';
 import type { Article } from '../app';
 
 export async function load({ fetch, params }) {
@@ -12,8 +12,8 @@ export async function load({ fetch, params }) {
 	const allArticles: Array<Article> = await Promise.all(
 		articles.data.map(async (a) => {
 			//console.log(a.attributes.Title);
-			const b = (await compile(a.attributes.body))?.code;
-			const i = (await compile(a.attributes.Introduction))?.code;
+			const b = (await marked.parse(a.attributes.body));
+			const i = (await marked.parse(a.attributes.Introduction));
 			const article: Article = {
 				headline: a.attributes.Title,
 				subheadline: a.attributes.Subheading,

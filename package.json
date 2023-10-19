@@ -37,6 +37,7 @@
 	"type": "module",
 	"dependencies": {
 		"iconify-icon": "^1.0.8",
+		"marked": "^9.1.2",
 		"rehype-slug": "^6.0.0",
 		"remark-toc": "^9.0.0"
 	}

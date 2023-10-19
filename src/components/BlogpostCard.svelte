@@ -6,7 +6,7 @@
 	export let article: Article;
 
 	// trim the introduction text if neccessary
-	console.log(article.featuredImage)
+
 	let introLength = 200;
 	if (article.introduction.length > introLength) {
 		article.introduction = article.introduction.substring(0, introLength) + '...';

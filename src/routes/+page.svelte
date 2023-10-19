@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Article } from '../app';
-	import { compile } from 'mdsvex';
+
 	import BlogpostCard from '../components/BlogpostCard.svelte';
 	export let data;
 	const items = [1, 2, 3, 4];
@@ -12,9 +12,7 @@
 
 	const articles = data.allArticles.slice(1);
 
-	data.allArticles.map(e => {
-		console.log(e.featuredImage)
-	})
+
 </script>
 
 <div>
