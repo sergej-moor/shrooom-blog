@@ -5,6 +5,9 @@ export async function load({ fetch, params }) {
 	// `fetch` understands the relative path and saves the response
 	// inside the HTML to be reused avoiding additional requests
 
+	const res = await fetch("/api/article");
+	console.log(res);
+
 	const slug = params.slug;
 	const response = await fetch(
 		'http://127.0.0.1:1337/api/articles?populate=*&filters[slug][$eq]=' + slug

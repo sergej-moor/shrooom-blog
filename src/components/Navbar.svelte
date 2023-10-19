@@ -26,19 +26,19 @@
 </script>
 
 <nav
-	class="border-black border-b-2 fixed z-50 w-full h-12 backdrop-blur-lg backdrop-opacity-100 bg-white"
+	class="fixed z-50 h-12 w-full border-b-2 border-black bg-white backdrop-blur-lg backdrop-opacity-100"
 >
 	<!-- 	<div class="w-full h-full mix-blend-difference absolute" /> -->
-	<ul class="flex justify-between items-center h-full w-full px-4">
+	<ul class="flex h-full w-full items-center justify-between px-4">
 		<li>
 			<a
 				href="/"
-				class="font-heading font-bold hover:font-extrabold hover:transition-all duration-1000"
+				class="font-heading font-bold duration-1000 hover:font-extrabold hover:transition-all"
 				>Shrooom</a
 			>
 		</li>
 		<li class="sm:hidden">
-			<button class="text-2xl flex items-center" on:click={() => (navbarActive = !navbarActive)}>
+			<button class="flex items-center text-2xl" on:click={() => (navbarActive = !navbarActive)}>
 				{#if !navbarActive}
 					<iconify-icon icon="ic:baseline-menu" />
 				{:else}
@@ -46,9 +46,9 @@
 				{/if}
 			</button>
 		</li>
-		<span class="sm:flex gap-x-8 hidden">
+		<span class="hidden gap-x-8 sm:flex">
 			{#each navbarLinks as link}
-				<li class="hover:underline hover:font-semibold transition-all">
+				<li class="transition-all hover:font-semibold hover:underline">
 					<a href={link.url}>{link.name}</a>
 				</li>
 			{/each}
@@ -58,13 +58,13 @@
 <!-- menu -->
 {#if navbarActive}
 	<!-- content here -->
-	<div class="fixed bg-white w-full h-full z-50">
-		<div class="h-12 border-black border-b-2">
-			<ul class="flex justify-between items-center h-full w-full px-4">
+	<div class="fixed z-50 h-full w-full bg-white">
+		<div class="h-12 border-b-2 border-black">
+			<ul class="flex h-full w-full items-center justify-between px-4">
 				<li><a href="/" class="font-heading font-bold">Shrooom</a></li>
 				<li>
 					<button
-						class="text-2xl flex items-center"
+						class="flex items-center text-2xl"
 						on:click={() => (navbarActive = !navbarActive)}
 					>
 						{#if !navbarActive}
@@ -78,10 +78,10 @@
 		</div>
 		<ul>
 			{#each navbarLinks as link}
-				<li class="border-black border-b-2">
+				<li class="border-b-2 border-black">
 					<button
 						on:click={() => navigate(link.url)}
-						class="text-3xl font-semibold p-4 hover:underline hover:font-bold transition-all w-full flex"
+						class="flex w-full p-4 text-3xl font-semibold transition-all hover:font-bold hover:underline"
 						>{link.name}</button
 					>
 				</li>

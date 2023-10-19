@@ -20,27 +20,27 @@
 	};
 </script>
 
-<main class="min-h-screen flex flex-col items-center">
+<main class="flex min-h-screen flex-col items-center">
 	<div class="  md:max-w-md lg:max-w-lg xl:max-w-xl">
 		<article>
 			<section id="header">
-				<h1 class="font-bold text-3xl">{article.headline}</h1>
-				<h3 class="font-semibold text-2xl">{article.subheadline}</h3>
-				<div class="flex justify-between mt-4">
-					<div class="font-bold text-sm">
+				<h1 class="text-3xl font-bold">{article.headline}</h1>
+				<h3 class="text-2xl font-semibold">{article.subheadline}</h3>
+				<div class="mt-4 flex justify-between">
+					<div class="text-sm font-bold">
 						written by {article.author}
 					</div>
 					<div class="text-sm font-bold">{estimatedReadingTime()} min read</div>
 				</div>
 				<div id="divider" class="border-b-2 border-black" />
-				<div class=" text-sm mb-4 text-right">
+				<div class=" mb-4 text-right text-sm">
 					{new Date(article.publishedAt).toDateString()}
 				</div>
-				<div class="border-2 border-black mb-4">
+				<div class="mb-4 border-2 border-black">
 					<img
 						src={`http://127.0.0.1:1337${article.featuredImage}`}
 						alt=""
-						class=" h-60 sm:h-[calc(100vh-22rem)] w-full object-cover"
+						class=" h-60 w-full object-cover sm:h-[calc(100vh-22rem)]"
 					/>
 				</div>
 			</section>
@@ -54,11 +54,11 @@
 				</div>
 			</section>
 		</article>
-		<section id="bottom" class=" w-full my-8">
+		<section id="bottom" class=" my-8 w-full">
 			<ul class="my-2 flex gap-2">
 				{#each article.categories as category}
 					<!-- content here -->
-					<li class="border-black border-2 rounded-full py-1 px-2">
+					<li class="rounded-full border-2 border-black px-2 py-1">
 						{category}
 					</li>
 				{/each}
@@ -68,8 +68,8 @@
 </main>
 
 <section id="recommendations" class="my-8">
-	<h1 class="font-bold text-2xl my-2">Recommendations</h1>
-	<div class="flex flex-col flex-wrap md:grid md:grid-cols-3 gap-y-8 gap-x-4">
+	<h1 class="my-2 text-2xl font-bold">Recommendations</h1>
+	<div class="flex flex-col flex-wrap gap-x-4 gap-y-8 md:grid md:grid-cols-3">
 		{#each recommendedArticles as article}
 			<BlogpostCard {article} />
 		{/each}

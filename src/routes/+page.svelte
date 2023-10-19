@@ -17,19 +17,19 @@
 	<section id="hero">
 		<a
 			href={`/articles/${coverStory.slug}`}
-			class=" h-[calc(100vh-100px)] flex flex-col max-w-full overflow-hidden"
+			class=" flex h-[calc(100vh-100px)] max-w-full flex-col overflow-hidden"
 		>
-			<div class="hidden md:block mt-8">
-				<h1 class="font-bold text-4xl">
+			<div class="mt-8 hidden md:block">
+				<h1 class="text-4xl font-bold">
 					{coverStory.headline}
 				</h1>
-				<h2 class="font-bold text-2xl text-gray-500">
+				<h2 class="text-2xl font-bold text-gray-500">
 					{coverStory.subheadline}
 				</h2>
-				<div id="divider" class="border-b-2 border-black my-4" />
+				<div id="divider" class="my-4 border-b-2 border-black" />
 			</div>
 
-			<div class="border-2 border-black relative h-[calc(100vh-100px)] md:h-fit overflow-hidden">
+			<div class="relative h-[calc(100vh-100px)] overflow-hidden border-2 border-black md:h-fit">
 				<img
 					src={`http://127.0.0.1:1337${coverStory.featuredImage}`}
 					alt=""
@@ -38,24 +38,24 @@
 
 				<div
 					id="info"
-					class="border-2 border-white absolute w-[calc(100%-1rem)] bottom-0 p-2 m-2 text-white bg-black/60 backdrop-blur-sm flex flex-col gap-y-2 md:p-6"
+					class="absolute bottom-0 m-2 flex w-[calc(100%-1rem)] flex-col gap-y-2 border-2 border-white bg-black/60 p-2 text-white backdrop-blur-sm md:p-6"
 				>
 					<div class="  mb-4">
-						<h1 class=" md:hidden text-3xl font-bold">{coverStory.headline}</h1>
-						<h3 class="md:hidden font text-2xl">{coverStory.subheadline}</h3>
-						<span class="hidden md:block text-lg">{@html coverStory.introduction}</span>
+						<h1 class=" text-3xl font-bold md:hidden">{coverStory.headline}</h1>
+						<h3 class="font text-2xl md:hidden">{coverStory.subheadline}</h3>
+						<span class="hidden text-lg md:block">{@html coverStory.introduction}</span>
 					</div>
 
 					<!-- author and publishdate -->
 					<div class="flex flex-wrap justify-between gap-y-2 md:gap-x-16">
-						<div class="w-full md:w-auto flex flex-wrap justify-between md:gap-x-16">
+						<div class="flex w-full flex-wrap justify-between md:w-auto md:gap-x-16">
 							<div id="writtenby" class="">
 								<div class="flex flex-col gap-y-1">
-									<div class="text-sm hidden md:block font-semibold">Written by</div>
+									<div class="hidden text-sm font-semibold md:block">Written by</div>
 									<div class="flex items-center gap-x-2">
 										<img
 											src="/images/personplaceholder.jpg"
-											class="rounded-full h-8 w-8 object-cover hidden md:block"
+											class="hidden h-8 w-8 rounded-full object-cover md:block"
 											alt=""
 										/>
 										<div class=" text-sm">
@@ -67,7 +67,7 @@
 
 							<div id="publishdate" class="">
 								<div class="flex flex-col gap-y-1">
-									<div class="text-sm hidden md:block font-semibold">Published on</div>
+									<div class="hidden text-sm font-semibold md:block">Published on</div>
 									<div class="flex items-center">
 										<div class="h-8" />
 										<div class=" text-sm">
@@ -77,11 +77,11 @@
 								</div>
 							</div>
 						</div>
-						<div id="categories" class="flex flex-col gap-y-1 w-full md:w-auto">
-							<div class="text-sm hidden md:block font-semibold">Tags</div>
-							<ul class="flex gap-2 flex-wrap">
+						<div id="categories" class="flex w-full flex-col gap-y-1 md:w-auto">
+							<div class="hidden text-sm font-semibold md:block">Tags</div>
+							<ul class="flex flex-wrap gap-2">
 								{#each coverStory.categories as category}
-									<li class="border-2 rounded-full w-fit py-1 px-2 text-sm">
+									<li class="w-fit rounded-full border-2 px-2 py-1 text-sm">
 										{category}
 									</li>
 								{/each}
@@ -96,8 +96,8 @@
 	</section>
 
 	<section id="latestarticles" class="my-8">
-		<h1 class="font-bold text-2xl my-2">Latest Articles</h1>
-		<div class="flex flex-col flex-wrap md:grid md:grid-cols-3 gap-y-8 gap-x-4">
+		<h1 class="my-2 text-2xl font-bold">Latest Articles</h1>
+		<div class="flex flex-col flex-wrap gap-x-4 gap-y-8 md:grid md:grid-cols-3">
 			{#each articles as article}
 				<BlogpostCard {article} />
 			{/each}

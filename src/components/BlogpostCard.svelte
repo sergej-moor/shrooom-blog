@@ -12,25 +12,25 @@
 	}
 </script>
 
-<div class="text-sm flex flex-col gap-y-2">
+<div class="flex flex-col gap-y-2 text-sm">
 	<a href={'/articles/' + article.slug} class=" flex flex-col gap-y-2">
 		<img
 			src={`http://127.0.0.1:1337${article.featuredImage}`}
-			class="border-2 border-black h-64 w-full object-cover mb-4"
+			class="mb-4 h-64 w-full border-2 border-black object-cover"
 			alt=""
 		/>
 
-		<h2 class="font-bold text-2xl flex">
+		<h2 class="flex text-2xl font-bold">
 			<span>{article.headline}</span>
 			<IcRoundArrowOutward class="h-8 w-8" />
 		</h2>
 		<p>{@html article.introduction}</p>
 	</a>
 
-	<ul class="my-2 flex gap-2 flex-wrap">
+	<ul class="my-2 flex flex-wrap gap-2">
 		{#each article.categories as category}
 			<!-- content here -->
-			<li class="border-black border-2 rounded-full py-1 px-2 w-fit">
+			<li class="w-fit rounded-full border-2 border-black px-2 py-1">
 				{category}
 			</li>
 		{/each}

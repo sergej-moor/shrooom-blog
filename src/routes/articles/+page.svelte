@@ -5,20 +5,20 @@
 <div class="min-h-screen">
 	<div>
 		<section id="header">
-			<div class="border-2 border-black mb-4">
+			<div class="mb-4 border-2 border-black">
 				<img src="/images/placeholder.jpg" alt="" class=" h-60 w-full object-cover" />
 			</div>
-			<h1 class="font-bold text-3xl">
+			<h1 class="text-3xl font-bold">
 				{title}
 			</h1>
 
-			<div class="flex justify-between mt-4">
-				<div class="font-bold text-sm">
+			<div class="mt-4 flex justify-between">
+				<div class="text-sm font-bold">
 					written by <a href="" class="underline">Amelie Laurent</a>
 				</div>
 				<div class="text-sm font-bold">10 min read</div>
 			</div>
-			<div id="divider" class="border-b-2 border-black mb-4" />
+			<div id="divider" class="mb-4 border-b-2 border-black" />
 			<h2 class="">
 				This is how you get free, buy your time back, work less, and enjoy the magic of your phone
 			</h2>
