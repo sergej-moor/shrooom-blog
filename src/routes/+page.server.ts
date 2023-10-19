@@ -17,7 +17,7 @@ export async function load({ fetch, params }) {
 			const article: Article = {
 				headline: a.attributes.Title,
 				subheadline: a.attributes.Subheading,
-				featuredImage: a.attributes.featured_image.data.attributes.formats.large.url,
+				featuredImage: a.attributes.featured_image.data.attributes.url,
 				author: a.attributes.author.data.attributes.FullName,
 				introduction: i ? i : '',
 				body: b ? b : '',

@@ -1,7 +1,7 @@
 <script lang="ts">
 	export let form;
 	export let data;
-	console.log(data);
+	
 </script>
 
 <div class="flex justify-center">

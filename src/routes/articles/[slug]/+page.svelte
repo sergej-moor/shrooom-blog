@@ -38,7 +38,7 @@
 				</div>
 				<div class="mb-4 border-2 border-black">
 					<img
-						src={`http://127.0.0.1:1337${article.featuredImage}`}
+						src={article.featuredImage}
 						alt=""
 						class=" h-60 w-full object-cover sm:h-[calc(100vh-22rem)]"
 					/>

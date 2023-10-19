@@ -9,9 +9,6 @@ export async function load({ fetch, params }) {
 	const response = await fetch(`/api/article?slug=${slug}`);
 
 
-/* 	const response = await fetch(
-		'http://127.0.0.1:1337/api/articles?populate=*&filters[slug][$eq]=' + slug
-	); */
 
 	// SvelteKit is going to generate the types
 	const articles = await response.json();
@@ -20,13 +17,14 @@ export async function load({ fetch, params }) {
 
 	const allArticles: Array<Article> = await Promise.all(
 		articles.data.map(async (a) => {
+			console.log(a);
 			//console.log(a.attributes.Title);
 			const b = (await compile(a.attributes.body))?.code;
 			const i = (await compile(a.attributes.Introduction))?.code;
 			const article: Article = {
 				headline: a.attributes.Title,
 				subheadline: a.attributes.Subheading,
-				featuredImage: a.attributes.featured_image.data.attributes.formats.large.url,
+				featuredImage: a.attributes.featured_image.data.attributes.url,
 				author: a.attributes.author.data.attributes.FullName,
 				introduction: i ? i : '',
 				body: b ? b : '',

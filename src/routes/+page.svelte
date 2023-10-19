@@ -11,6 +11,10 @@
 	//coverStory.publishedAt = coverStory.publishedAt.toLocaleDateString('en-GB');
 
 	const articles = data.allArticles.slice(1);
+
+	data.allArticles.map(e => {
+		console.log(e.featuredImage)
+	})
 </script>
 
 <div>
@@ -31,7 +35,7 @@
 
 			<div class="relative h-[calc(100vh-100px)] overflow-hidden border-2 border-black md:h-fit">
 				<img
-					src={`http://127.0.0.1:1337${coverStory.featuredImage}`}
+					src={coverStory.featuredImage}
 					alt=""
 					class="h-full w-full object-cover"
 				/>

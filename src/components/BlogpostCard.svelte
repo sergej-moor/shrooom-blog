@@ -6,6 +6,7 @@
 	export let article: Article;
 
 	// trim the introduction text if neccessary
+	console.log(article.featuredImage)
 	let introLength = 200;
 	if (article.introduction.length > introLength) {
 		article.introduction = article.introduction.substring(0, introLength) + '...';
@@ -15,7 +16,7 @@
 <div class="flex flex-col gap-y-2 text-sm">
 	<a href={'/articles/' + article.slug} class=" flex flex-col gap-y-2">
 		<img
-			src={`http://127.0.0.1:1337${article.featuredImage}`}
+			src={article.featuredImage}
 			class="mb-4 h-64 w-full border-2 border-black object-cover"
 			alt=""
 		/>

@@ -1,8 +1,8 @@
 import { json } from '@sveltejs/kit';
-
+import { STRAPI_URL } from '$env/static/private';
 /** @type {import('./$types').RequestHandler} */
 export async function GET() {
-	const res = await fetch('http://127.0.0.1:1337/api/contact-page');
+	const res = await fetch(`${STRAPI_URL}/contact-page`);
 
 	return res;
 }
