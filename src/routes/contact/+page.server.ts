@@ -1,5 +1,16 @@
 import { fail } from '@sveltejs/kit';
 
+export async function load({ fetch, params }) {
+	// `fetch` understands the relative path and saves the response
+	// inside the HTML to be reused avoiding additional requests
+	const response = await fetch('/api/contact');
+
+	// SvelteKit is going to generate the types
+	const data = await response.json();
+
+	return data.data.attributes;
+}
+
 export const actions = {
 	send: async ({ request }) => {
 		const formData = await request.formData();

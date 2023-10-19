@@ -2,5 +2,3 @@
 </script>
 
 <slot><!-- optional fallback --></slot>
-
-

@@ -80,17 +80,14 @@
 						<div id="categories" class="flex flex-col gap-y-1 w-full md:w-auto">
 							<div class="text-sm hidden md:block font-semibold">Tags</div>
 							<ul class="flex gap-2 flex-wrap">
-							 				{#each coverStory.categories as category}
-								
+								{#each coverStory.categories as category}
 									<li class="border-2 rounded-full w-fit py-1 px-2 text-sm">
 										{category}
 									</li>
-								{/each} 
+								{/each}
 							</ul>
 						</div>
 					</div>
-
-				
 
 					<div />
 				</div>
@@ -105,5 +102,5 @@
 				<BlogpostCard {article} />
 			{/each}
 		</div>
-	</section> 
+	</section>
 </div>

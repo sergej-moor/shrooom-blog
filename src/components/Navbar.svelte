@@ -19,7 +19,7 @@
 		}
 	];
 
-	function navigate(url:string) {
+	function navigate(url: string) {
 		goto(url);
 		navbarActive = false;
 	}

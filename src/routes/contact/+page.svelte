@@ -1,30 +1,30 @@
 <script lang="ts">
 	export let form;
-	console.log(form);
+	export let data;
+	console.log(data);
 </script>
 
 <div class="flex justify-center">
 	<main class="min-h-screen md:max-w-md lg:max-w-lg xl:max-w-xl">
-		<h1 class="font-bold text-3xl">Contact</h1>
+		<h1 class="font-bold text-3xl">{data.Title}</h1>
 		<section class="my-8 flex flex-col gap-y-2">
-			<p>We appreciate direct contact and look forward to your call or message.</p>
+			<p>{data.Introduction}</p>
 			<div class="flex flex-col w-fit gap-2">
-				<a href="tel:+123456789" class="text-white bg-black p-2 flex items-center"
+				<a href={`tel:${data.Telephone}`} class="text-white bg-black p-2 flex items-center"
 					><iconify-icon class="mx-2" icon="mdi:telephone" />
-					<span class="flex-1">+49 123 456 789 5</span>
+					<span class="flex-1">{data.Telephone}</span>
 					<iconify-icon class="mx-2" icon="mdi:arrow-right" /></a
 				>
-				<a href="mailto:hello@shrooom.com" class="text-white bg-black p-2 flex items-center"
+				<a href={`mailto:${data.Email}`} class="text-white bg-black p-2 flex items-center"
 					><iconify-icon class="mx-2" icon="mdi:email" />
-					<span class="flex-1">hello@shrooom.com</span>
+					<span class="flex-1">{data.Email}</span>
 					<iconify-icon class="mx-2" icon="mdi:arrow-right" /></a
 				>
 			</div>
 		</section>
 		<section class="my-8">
 			<p class="my-4">
-				If you have any questions or want to learn more about us, you can send us a message directly
-				here. Our team will get back to you as soon as possible.
+				{data.FormText}
 			</p>
 			{#if form?.success}
 				<!-- content here -->
