@@ -5,14 +5,14 @@
 	let navbarActive = false;
 
 	let navbarLinks = [
-		{
+/* 		{
 			name: 'Home',
 			url: '/'
 		},
 		{
 			name: 'About',
 			url: '/about'
-		},
+		}, */
 		{
 			name: 'Contact',
 			url: '/contact'
