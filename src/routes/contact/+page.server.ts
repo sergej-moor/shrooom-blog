@@ -1,4 +1,5 @@
 import { fail } from '@sveltejs/kit';
+import { STRAPI_URL } from '$env/static/private';
 
 export async function load({ fetch, params }) {
 	// `fetch` understands the relative path and saves the response
@@ -40,7 +41,7 @@ export const actions = {
 		if (failObj.emailMissing || failObj.fullnameMissing || failObj.messageMissing)
 			return fail(400, failObj);
 
-		const response = await fetch('http://127.0.0.1:1337/api/contacts', {
+		const response = await fetch(STRAPI_URL+'/contacts', {
 			method: 'POST',
 			body: JSON.stringify({
 				data: {

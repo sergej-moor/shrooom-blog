@@ -6,7 +6,9 @@ export default {
 			sans: ['Montserrat', 'sans-serif'],
 			heading: ['Syne', 'sans-serif']
 		},
-		extend: {}
+		extend: {
+			
+		}
 	},
 	plugins: [require('@tailwindcss/forms')]
 };

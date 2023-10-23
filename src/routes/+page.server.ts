@@ -8,12 +8,13 @@ export async function load({ fetch, params }) {
 
 	// SvelteKit is going to generate the types
 	const articles = await response.json();
+	console.log(articles);
 
 	const allArticles: Array<Article> = await Promise.all(
 		articles.data.map(async (a) => {
 			//console.log(a.attributes.Title);
-			const b = (await marked.parse(a.attributes.body));
-			const i = (await marked.parse(a.attributes.Introduction));
+			const b = await marked.parse(a.attributes.body);
+			const i = await marked.parse(a.attributes.Introduction);
 			const article: Article = {
 				headline: a.attributes.Title,
 				subheadline: a.attributes.Subheading,

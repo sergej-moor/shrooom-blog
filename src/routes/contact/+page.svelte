@@ -4,8 +4,8 @@
 	
 </script>
 
-<div class="flex justify-center">
-	<main class="min-h-screen md:max-w-md lg:max-w-lg xl:max-w-xl">
+
+	<main >
 		<h1 class="text-3xl font-bold">{data.Title}</h1>
 		<section class="my-8 flex flex-col gap-y-2">
 			<p>{data.Introduction}</p>
@@ -110,4 +110,3 @@
 			</form>
 		</section>
 	</main>
-</div>

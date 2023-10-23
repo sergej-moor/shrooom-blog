@@ -13,27 +13,25 @@
 	}
 </script>
 
-<div class="flex flex-col gap-y-2 text-sm">
-	<a href={'/articles/' + article.slug} class=" flex flex-col gap-y-2">
+<a href={'/articles/' + article.slug} class="flex flex-col justify-between gap-y-2 text-sm">
+	<div>
 		<img
 			src={article.featuredImage}
 			class="mb-4 h-64 w-full border-2 border-black object-cover"
 			alt=""
 		/>
 
-		<h2 class="flex text-2xl font-bold">
+		<h2 class="flex justify-between text-2xl font-bold">
 			<span>{article.headline}</span>
-			<IcRoundArrowOutward class="h-8 w-8" />
+			<iconify-icon icon="mdi:arrow-top-right" class="  text-3xl" />
 		</h2>
 		<p>{@html article.introduction}</p>
-	</a>
-
+	</div>
 	<ul class="my-2 flex flex-wrap gap-2">
 		{#each article.categories as category}
-			<!-- content here -->
 			<li class="w-fit rounded-full border-2 border-black px-2 py-1">
 				{category}
 			</li>
 		{/each}
 	</ul>
-</div>
+</a>
