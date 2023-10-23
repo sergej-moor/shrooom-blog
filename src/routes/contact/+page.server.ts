@@ -1,7 +1,7 @@
 import { fail } from '@sveltejs/kit';
 import { STRAPI_URL } from '$env/static/private';
 
-export async function load({ fetch, params }) {
+export async function load({ fetch }) {
 	// `fetch` understands the relative path and saves the response
 	// inside the HTML to be reused avoiding additional requests
 	const response = await fetch('/api/contact');

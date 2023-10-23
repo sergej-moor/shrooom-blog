@@ -21,35 +21,3 @@
 		clip-path: polygon(100% 0%, 100% 52%, 100% 100%, 0 100%, 0 15%, 25% 0%);
 	}
 }
-
-h1 {
-	font-size: theme('fontSize.2xl');
-}
-
-h2 {
-	font-size: theme('fontSize.xl');
-}
-
-h3 {
-	font-size: theme('fontSize.lg');
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-weight: bold;
-	margin: 1.5rem 0 0.5rem 0;
-}
-
-ol li {
-	list-style-type: circle;
-	margin-left: 1rem;
-}
-
-article ul li {
-	list-style-type: point;
-	margin-left: 1rem;
-}
